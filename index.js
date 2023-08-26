@@ -33,13 +33,13 @@ bot.on('message', async (msg) => {
     try {
       const data = JSON.parse(msg?.web_app_data?.data);
 
-      await bot.sendMessage('thanks for the feedback');
-      await bot.sendMessage('your country: ' + data?.country );
-      await bot.sendMessage('your city: ' + data?.city);
+      await bot.sendMessage(chatId, 'thanks for the feedback');
+      await bot.sendMessage(chatId, 'your country: ' + data?.country );
+      await bot.sendMessage(chatId, 'your city: ' + data?.city);
 
-      setTimeout(() => {
-      
-      })
+      setTimeout( async () => {
+        await bot.sendMessage(chatId, 'all information you will receive in this chat');
+      }, 3000)
 
     } catch (e) {
       console.log(e);
