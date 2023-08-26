@@ -14,7 +14,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'Received your message', {
       reply_markup: {
         keyboard: [
-          [{text: 'fill in the form', web_app: {url: webAppUrl + '/form'}}],
+          [{text: 'fill in the form', web_app: {url: webAppUrl}}],
           
         ]
       }
@@ -23,7 +23,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'button below, fill out the form', {
       reply_markup: {
         inline_keyboard: [
-          [{text: 'Buy TonDeV Coin', web_app: {url: webAppUrl}}],
+          [{text: 'Buy TonDeV Coin', web_app: {url: webAppUrl + '/form'}}],
         ]
       }
     })
