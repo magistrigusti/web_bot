@@ -2,7 +2,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 
 const token = '6616263618:AAHUcrbnd54vReGN_uO7nrLXI2qNc_tgkQY';
-const webAppUrl = 'https://clinquant-sfogliatella-365c77.netlify.app/form';
+const webAppUrl = 'https://clinquant-sfogliatella-365c77.netlify.app';
 
 const bot = new TelegramBot(token, {polling: true});
 
